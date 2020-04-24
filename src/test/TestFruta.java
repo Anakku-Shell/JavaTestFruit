@@ -20,5 +20,11 @@ class TestFruta {
 		Fruta testFruit = new Fruta("Melón", 26, 1, "XB97676", "Baja");
 		assertTrue(testFruit.getNombre().equals("Melón"));
 	}
+	
+	@Test
+	void reponerStock() {
+		Fruta testFruit = new Fruta("Tomate", 5, 0.57, "TS21664", "Baja");
+		assertEquals(55, OperationsFruit.reponerStock(5, testFruit));
+	}
 
 }
