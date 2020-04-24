@@ -13,7 +13,6 @@ public class Main {
 		fruta.setPrecio(0.79);
 		fruta.setLote("AX45123");
 		fruta.setMadurez("Media");
-		String prueba = "";
 
 		System.out.println(fruta.toString());
 		

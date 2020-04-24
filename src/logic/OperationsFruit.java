@@ -1,5 +1,8 @@
 package logic;
 
+import java.time.LocalTime;
+import java.util.Calendar;
+
 import model.Fruta;
 
 public class OperationsFruit {
@@ -28,6 +31,20 @@ public class OperationsFruit {
 			System.out.println("Se han comprado 50 " + fruta.getNombre());
 		}
 		return fruta.getCantidad();
+	}
+	
+	// MÉTODOS CHORRA
+	public static String cambiarNombre (Fruta fruta, String nuevoNombre) {
+		fruta.setNombre(nuevoNombre);
+		return nuevoNombre;
+	}
+	
+	public static boolean stockNegativo (Fruta fruta) {
+		boolean cantidadNegativa = false;
+		if (fruta.getCantidad() < 0) {
+			cantidadNegativa = true;
+		}
+		return cantidadNegativa;
 	}
 	
 	

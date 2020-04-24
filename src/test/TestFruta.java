@@ -26,5 +26,18 @@ class TestFruta {
 		Fruta testFruit = new Fruta("Tomate", 5, 0.57, "TS21664", "Baja");
 		assertEquals(55, OperationsFruit.reponerStock(5, testFruit));
 	}
+	
+	@Test
+	void cambiarNombre() {
+		Fruta testFruit = new Fruta("Tomate", 5, 0.57, "TS21664", "Baja");
+		assertEquals("Cucumber", OperationsFruit.cambiarNombre(testFruit, "Cucumber"));
+	}
+	
+	@Test
+	void stockNegativo() {
+		Fruta testFruit = new Fruta("Tomate", 5, 0.57, "TS21664", "Baja");
+		testFruit.setCantidad(-5);
+		assertEquals(true, OperationsFruit.stockNegativo(testFruit));
+	}
 
 }

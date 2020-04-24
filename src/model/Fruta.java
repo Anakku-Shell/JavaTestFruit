@@ -64,6 +64,7 @@ public class Fruta {
 		this.madurez = madurez;
 	}
 	
+	// TO STRING
 	@Override
 	public String toString() {
 		return "Fruta [nombre=" + nombre + ", cantidad=" + cantidad + ", precio=" + precio + ", lote=" + lote
